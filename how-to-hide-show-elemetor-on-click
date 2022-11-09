@@ -1,0 +1,26 @@
+jQuery("img.arrow-down").on("click",function(){
+         jQuery(this).hide();
+         jQuery(this).next('.arrow-up').show();
+        if(jQuery(this).parent(".toggle-btn").hasClass('active')){
+            jQuery(".toggle-btn").removeClass("active");
+            jQuery(this).parent(".toggle-btn").removeClass("active");
+           
+        }else{
+            jQuery(".toggle-btn").removeClass("active");
+            jQuery(this).parent(".toggle-btn").addClass("active");
+        }
+    });
+    
+    
+    jQuery("img.arrow-up").on("click",function(){
+         jQuery(this).hide();
+         jQuery(this).prev('.arrow-down').show();
+        if(jQuery(this).parent(".toggle-btn").hasClass('active')){
+            jQuery(".toggle-btn").removeClass("active");
+            jQuery(this).parent(".toggle-btn").removeClass("active");
+           
+        }else{
+            jQuery(".toggle-btn").removeClass("active");
+            jQuery(this).parent(".toggle-btn").addClass("active");
+        }
+    });
